@@ -1,3 +1,7 @@
+body {
+  font-family: "Roboto", "Poppins", Arial, sans-serif;
+}
+
 .logo {
   width: 75px;
   height: 75px;
@@ -11,6 +15,11 @@
   align-items: center;
   justify-content: space-around;
   border-radius: 0px 0px 10px 10px;
+  z-index: 1;
+}
+
+.navbar-collapse {
+  width: 50%;
 }
 
 .navbar-nav {
@@ -18,10 +27,6 @@
   align-items: center;
   justify-content: space-around;
   margin: auto;
-}
-
-.navbar-collapse {
-  width: 50%;
 }
 
 .nav-link {
@@ -32,9 +37,9 @@
 
 .hero {
   height: 100vh;
+  z-index: -1;
 }
 
 .hero-video {
   width: 100%;
-  z-index: -1;
 }
