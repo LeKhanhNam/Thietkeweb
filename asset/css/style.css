@@ -1,0 +1,40 @@
+.logo {
+  width: 75px;
+  height: 75px;
+}
+
+#Navbar {
+  background-color: rgba(0, 0, 0, 0.655);
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.navbar-collapse {
+  width: 50%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: aliceblue;
+  font-family: sans-serif;
+}
+
+.hero {
+  height: 100vh;
+}
+
+.hero-video {
+  width: 100%;
+  z-index: -1;
+}
