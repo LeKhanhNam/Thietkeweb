@@ -3,11 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nhóm Tcon" />
+    <meta
+      name="description"
+      content="Trang giới thiệu đội tuyển T1, lịch sử, thành tích và các thành viên nổi bật như Faker."
+    />
+    <meta
+      name="keywords"
+      content="SKT T1, T1, Giới thiệu, Liên Minh Huyền Thoại, Faker, LCK, đội tuyển Esports"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="asset/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -30,40 +46,84 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="asset/css/style.css" />
     <title>T1 Homepage</title>
   </head>
   <body>
-    <nav id="Navbar" class="Navbar">
-      <a href="index.html"
-        ><img src="asset/img/T1-logo.png" alt="T1 logo" class="logo"
-      /></a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Trang chủ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Giới thiệu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Tuyển thủ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Thành tích</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Thư viện</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Liên hệ</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><img src="asset/img/T1-logo.png" alt="T1 logo" class="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gioi-thieu">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#doi-hinh">Tuyển thủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#thanh-tich">Thành tích</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#thu-vien">Thư viện</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#lien-he">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <section id="hero" class="hero">
-      <video class="hero-video" src="" autoplay></video>
+      <video
+        class="hero-video"
+        src="asset/videos/one_still_forever.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
     </section>
+    <main class="container">
+      <section class="abou">
+        <h1>THÔNG TIN ĐỘI TUYỂN</h1>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white footer">
+      <div class="container text-center py-3">
+        <p class="fw-bold mb-2">
+          &copy; 2025 SK Telecom CS T1 Co. ALL RIGHTS RESERVED
+        </p>
+        <p>
+          Follow us on:
+          <a href="https://www.facebook.com/T1LoL/" target="_blank"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="https://x.com/t1lol" target="_blank"
+            ><i class="bi bi-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/t1lol/" target="_blank"
+            ><i class="bi bi-instagram"></i
+          ></a>
+        </p>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
