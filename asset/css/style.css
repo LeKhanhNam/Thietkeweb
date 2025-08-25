@@ -1,6 +1,6 @@
 body {
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
-  background-color: #1a1a1a;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #141414;
   color: #e0e0e0;
 }
 
@@ -9,14 +9,38 @@ body {
   height: 75px;
 }
 
+.navbar {
+  background-color: #1f0000;
+}
+
 .navbar-brand .logo {
-  width: 50px;
-  height: auto;
+  height: 100%;
+  width: auto;
+}
+
+.nav-link {
+  margin: auto 15px;
+}
+
+.btn {
+  color: #fff;
+  background-color: #e30613;
+  padding: 6px;
+  width: 100px;
+  height: 40px;
+}
+
+.detail {
+  font-size: 20px;
+  color: #fff;
+}
+
+.navbar-collapse .btn {
+  margin-left: 18px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: 600;
+  color: #fff;
 }
 
 .navbar-dark .navbar-nav .nav-link.active,
@@ -43,6 +67,10 @@ h5,
 h6 {
   font-weight: 700;
   color: #fff;
+}
+
+.btn:hover {
+  background-color: #72030a;
 }
 
 .hero {
@@ -72,7 +100,7 @@ h6 {
   right: 0;
   bottom: -1px;
   height: 160px; /* tăng/giảm cho độ sâu cong */
-  background: #0b0b0b; /* MÀU NỀN ĐEN của trang/phần dưới */
+  background: #141414; /* MÀU NỀN ĐEN của trang/phần dưới */
   z-index: -1; /* nằm phía sau nội dung trắng */
   pointer-events: none;
 
@@ -93,12 +121,27 @@ h6 {
 
 .about-us h1 {
   color: #a79b42;
+  margin-bottom: 24px;
 }
 
 .about-us p {
-  margin-top: 30px;
+  margin: 30px 0 38Bpx;
   color: #000;
   font-size: 1.6rem;
+}
+
+.achieve {
+  padding: 0;
+}
+
+.achieve h1 {
+  color: #c3000d;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.achieve-content li {
+  font-size: 24px;
 }
 
 p.lead {
