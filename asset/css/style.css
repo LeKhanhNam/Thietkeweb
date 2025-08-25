@@ -45,6 +45,62 @@ h6 {
   color: #fff;
 }
 
+.hero {
+  padding-top: 76px;
+  padding-bottom: 0;
+}
+
+.hero-video {
+  width: 100%;
+  top: 0;
+}
+
+.about-us {
+  text-align: center;
+  padding-top: 0;
+  background: #e6e6e6;
+  position: relative;
+  padding: 64px 24px 120px;
+  overflow: visible;
+  z-index: 1;
+}
+
+.about-us::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 160px; /* tăng/giảm cho độ sâu cong */
+  background: #0b0b0b; /* MÀU NỀN ĐEN của trang/phần dưới */
+  z-index: -1; /* nằm phía sau nội dung trắng */
+  pointer-events: none;
+
+  clip-path: polygon(
+    0% 35%,
+    12.5% 45%,
+    25% 52%,
+    37.5% 56%,
+    50% 58%,
+    62.5% 56%,
+    75% 52%,
+    87.5% 45%,
+    100% 35%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+.about-us h1 {
+  color: #a79b42;
+}
+
+.about-us p {
+  margin-top: 30px;
+  color: #000;
+  font-size: 1.6rem;
+}
+
 p.lead {
   font-weight: 400;
   font-size: 1.15rem;

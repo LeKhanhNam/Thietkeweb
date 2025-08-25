@@ -67,10 +67,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Trang chủ</a>
+                <a class="nav-link active" href="#hero">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#gioi-thieu">Giới thiệu</a>
+                <a class="nav-link" href="#about-us">Giới thiệu</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#doi-hinh">Tuyển thủ</a>
@@ -88,46 +88,51 @@
           </div>
         </div>
       </nav>
+      <section id="hero" class="hero">
+        <video
+          class="hero-video"
+          src="asset/videos/T1_herovid.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+      </section>
     </header>
 
-    <section id="hero" class="hero">
-      <video
-        class="hero-video"
-        src="asset/videos/one_still_forever.mp4"
-        autoplay
-        muted
-        loop
-      ></video>
-    </section>
-    <main class="container">
-      <section class="abou">
-        <h1>THÔNG TIN ĐỘI TUYỂN</h1>
+    <main>
+      <section class="about-us" id="about-us">
+        <div class="container">
+          <h1>SỨ MỆNH VÀ GIÁ TRỊ CỦA T1</h1>
+          <p>
+            Được thành lập năm 2012, T1 (tiền thân là SKT T1) đã tạo nên một kỷ
+            nguyên huy hoàng với 4 chức vô địch CKTG và hàng loạt danh hiệu LCK.
+            T1 không chỉ đại diện cho sức mạnh trong LMHT mà còn là biểu tượng
+            văn hoá eSports Hàn Quốc. <br />
+            Sứ mệnh của T1: Truyền cảm hứng, tạo ra di sản bất diệt, và mang đến
+            những màn trình diễn đỉnh cao cho người hâm mộ toàn cầu.
+          </p>
+        </div>
       </section>
     </main>
 
-    <footer class="bg-dark text-white footer">
+    <footer class="bg-dark text-white">
       <div class="container text-center py-3">
         <p class="fw-bold mb-2">
           &copy; 2025 SK Telecom CS T1 Co. ALL RIGHTS RESERVED
         </p>
         <p>
           Follow us on:
-          <a href="https://www.facebook.com/T1LoL/" target="_blank"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a href="https://x.com/t1lol" target="_blank"
-            ><i class="bi bi-twitter"></i
-          ></a>
+          <a href="https://www.facebook.com/T1LoL/" target="_blank">Facebook</a>
+          | <a href="https://x.com/t1lol" target="_blank">Twitter</a> |
           <a href="https://www.instagram.com/t1lol/" target="_blank"
-            ><i class="bi bi-instagram"></i
-          ></a>
+            >Instagram</a
+          >
         </p>
       </div>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
