@@ -12,12 +12,8 @@ $(document).ready(function () {
         $(".countup").each(function () {
           const $this = $(this),
             countTo = $this.attr("data-count");
-          $({
-            countNum: $this.text(),
-          }).animate(
-            {
-              countNum: countTo,
-            },
+          $({ countNum: $this.text() }).animate(
+            { countNum: countTo },
             {
               duration: 2000,
               easing: "swing",
@@ -34,16 +30,33 @@ $(document).ready(function () {
       }
     }
   });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.querySelector("form");
 
+  const contactForm = document.getElementById("contactForm");
   if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
       if (validateForm()) {
         alert("Gửi form thành công! Chúng tôi sẽ liên hệ lại bạn sớm nhất.");
+        document
+          .querySelectorAll(".alert-success, .alert-danger")
+          .forEach((el) => el.remove());
+
+        const successMsg = document.createElement("div");
+        successMsg.classList.add(
+          "alert",
+          "alert-success",
+          "mt-3",
+          "fade",
+          "show"
+        );
+        successMsg.setAttribute("role", "alert");
+        successMsg.innerHTML = `
+    <strong>Thành công!</strong> Gửi form thành công. Chúng tôi sẽ liên hệ lại bạn sớm nhất.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Đóng"></button>
+  `;
+
+        contactForm.appendChild(successMsg);
 
         contactForm.reset();
       }
@@ -58,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const fanStatus = document.querySelector('input[name="fan"]:checked');
 
     resetErrors();
-
     let isValid = true;
 
     if (name.trim() === "") {
@@ -102,9 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .parentNode.appendChild(errorElement);
     } else {
       inputElement.parentNode.appendChild(errorElement);
+      inputElement.classList.add("is-invalid");
     }
-
-    inputElement.classList.add("is-invalid");
   }
 
   function resetErrors() {
