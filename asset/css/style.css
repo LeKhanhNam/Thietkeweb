@@ -134,14 +134,33 @@ h6 {
   padding: 0;
 }
 
+.achieve .row {
+  margin-bottom: 50px;
+}
+
 .achieve h1 {
   color: #c3000d;
   text-align: center;
   margin-bottom: 24px;
 }
 
+.achieve-content:nth-child(even) h2,
+.achieve-content:nth-child(even) li {
+  text-align: right;
+}
+
 .achieve-content li {
   font-size: 24px;
+}
+
+.achieve-image {
+  display: flex;
+  justify-content: center;
+}
+
+.achieve-img {
+  width: 300px;
+  border-radius: 20px;
 }
 
 p.lead {
