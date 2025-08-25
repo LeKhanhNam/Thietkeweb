@@ -121,3 +121,25 @@ footer a {
 .col-md-5 a.text-dark:hover {
   color: #e30613 !important;
 }
+
+.img-fluid rounded shadow mt-3 team-img {
+  max-width: 280px;
+}
+
+footer a {
+  color: #f8f9fa;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #e30613;
+}
+
+.btn-danger:hover {
+  background-color: #b30000;
+}
+
+.alert-success {
+  border-left: 5px solid #28a745;
+  font-weight: 500;
+}
