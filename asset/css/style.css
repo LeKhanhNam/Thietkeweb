@@ -1,6 +1,6 @@
 body {
-  font-family: "Roboto Condensed", sans-serif;
-  background-color: #141414;
+  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  background-color: #1a1a1a;
   color: #e0e0e0;
 }
 
@@ -9,38 +9,14 @@ body {
   height: 75px;
 }
 
-.navbar {
-  background-color: #1f0000;
-}
-
 .navbar-brand .logo {
-  height: 100%;
-  width: auto;
-}
-
-.nav-link {
-  margin: auto 15px;
-}
-
-.btn {
-  color: #fff;
-  background-color: #e30613;
-  padding: 6px;
-  width: 100px;
-  height: 40px;
-}
-
-.detail {
-  font-size: 20px;
-  color: #fff;
-}
-
-.navbar-collapse .btn {
-  margin-left: 18px;
+  width: 50px;
+  height: auto;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
 }
 
 .navbar-dark .navbar-nav .nav-link.active,
@@ -67,100 +43,6 @@ h5,
 h6 {
   font-weight: 700;
   color: #fff;
-}
-
-.btn:hover {
-  background-color: #72030a;
-}
-
-.hero {
-  padding-top: 76px;
-  padding-bottom: 0;
-}
-
-.hero-video {
-  width: 100%;
-  top: 0;
-}
-
-.about-us {
-  text-align: center;
-  padding-top: 0;
-  background: #e6e6e6;
-  position: relative;
-  padding: 64px 24px 120px;
-  overflow: visible;
-  z-index: 1;
-}
-
-.about-us::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 160px; /* tăng/giảm cho độ sâu cong */
-  background: #141414; /* MÀU NỀN ĐEN của trang/phần dưới */
-  z-index: -1; /* nằm phía sau nội dung trắng */
-  pointer-events: none;
-
-  clip-path: polygon(
-    0% 35%,
-    12.5% 45%,
-    25% 52%,
-    37.5% 56%,
-    50% 58%,
-    62.5% 56%,
-    75% 52%,
-    87.5% 45%,
-    100% 35%,
-    100% 100%,
-    0% 100%
-  );
-}
-
-.about-us h1 {
-  color: #a79b42;
-  margin-bottom: 24px;
-}
-
-.about-us p {
-  margin: 30px 0 38Bpx;
-  color: #000;
-  font-size: 1.6rem;
-}
-
-.achieve {
-  padding: 0;
-}
-
-.achieve .row {
-  margin-bottom: 50px;
-}
-
-.achieve h1 {
-  color: #c3000d;
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.achieve-content:nth-child(even) h2,
-.achieve-content:nth-child(even) li {
-  text-align: right;
-}
-
-.achieve-content li {
-  font-size: 24px;
-}
-
-.achieve-image {
-  display: flex;
-  justify-content: center;
-}
-
-.achieve-img {
-  width: 300px;
-  border-radius: 20px;
 }
 
 p.lead {
@@ -260,4 +142,13 @@ footer a:hover {
 .alert-success {
   border-left: 5px solid #28a745;
   font-weight: 500;
+}
+
+.card-text.fw-bold {
+  color: #e0e0e0;
+}
+
+.mb-4,
+.fw-bold.mb-3.text-center {
+  color: #b30000;
 }
