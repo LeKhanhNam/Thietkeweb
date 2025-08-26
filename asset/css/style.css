@@ -87,17 +87,17 @@ h6 {
   top: 0;
 }
 
-.about-us {
+#about-us {
   text-align: center;
   padding-top: 0;
   background: #e6e6e6;
   position: relative;
-  padding: 64px 24px 120px;
+  padding: 100px 24px 120px;
   overflow: visible;
   z-index: 1;
 }
 
-.about-us::after {
+#about-us::after {
   content: "";
   position: absolute;
   left: 0;
@@ -123,30 +123,65 @@ h6 {
   );
 }
 
-.about-us h1 {
+#about-us h1 {
   color: #a79b42;
   margin-bottom: 24px;
 }
 
-.about-us p {
+#about-us p {
   margin: 30px 0 38px;
   color: #000;
   font-size: 1.6rem;
 }
 
-.achieve {
-  padding: 0;
+#achieve {
+  text-align: center;
+  background: #1a1a1a; /* ở đây nền chính là đen */
+  position: relative;
+  padding: 100px 24px 100px;
+  overflow: visible;
+  z-index: 1;
 }
 
-.achieve .row {
+#achieve::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 120px;
+  background: #e6e6e6; /* MÀU NGƯỢC LẠI: trắng của section kế tiếp */
+  z-index: -1;
+  pointer-events: none;
+
+  /* Đường cong NGƯỢC LÊN (đảo màu so với #about-us) */
+  clip-path: polygon(
+    0% 35%,
+    12.5% 45%,
+    25% 52%,
+    37.5% 56%,
+    50% 58%,
+    62.5% 56%,
+    75% 52%,
+    87.5% 45%,
+    100% 35%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+#achieve .row {
   margin: 60px auto;
 }
 
-.achieve h1 {
+#achieve h1 {
   color: #c3000d;
   text-align: center;
 }
-
+.achieve-content h2,
+.achieve-content li {
+  text-align: left;
+}
 .achieve-content:nth-child(even) h2,
 .achieve-content:nth-child(even) li {
   text-align: right;
@@ -154,6 +189,7 @@ h6 {
 
 .achieve-content li {
   font-size: 24px;
+  list-style-position: inside;
 }
 
 .achieve-image {
@@ -164,6 +200,69 @@ h6 {
 .achieve-img {
   width: 300px;
   border-radius: 20px;
+}
+
+#roster {
+  padding-top: 0;
+  background-color: #e6e6e6;
+  text-align: center;
+}
+
+#roster h1 {
+  color: #a79b42;
+}
+
+#roster h2 {
+  color: #a79b42;
+  margin: 48px;
+}
+
+.player {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 0;
+  width: 200px;
+  height: 270px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.player:hover {
+  transform: scale(1.05);
+}
+
+.player-role {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+}
+
+.player-face {
+  width: 200px;
+  height: 215px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.player-name {
+  display: flex;
+  align-self: center;
+  margin-top: 0;
+  padding: auto;
+  border-radius: 10px;
+  background-color: #e1e1e1;
+  justify-content: center;
+  height: 55px;
+}
+
+.player-name h5 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: #770505;
 }
 
 p.lead {
@@ -269,7 +368,6 @@ footer a:hover {
   color: #e0e0e0;
 }
 
-.mb-4,
 .fw-bold.mb-3.text-center {
   color: #b30000;
 }

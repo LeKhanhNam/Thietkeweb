@@ -20,6 +20,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -49,13 +50,14 @@
     <link rel="stylesheet" href="asset/css/style.css" />
     <title>T1 Homepage</title>
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="80">
     <header>
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container">
-          <a class="navbar-brand" href="index.html"
-            ><img src="asset/img/T1-logo.png" alt="T1 logo" class="logo"
-          /></a>
+          <a class="navbar-brand" href="index.html">
+            <img src="asset/img/T1-logo.png" alt="T1 logo" class="logo" />
+          </a>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -64,10 +66,11 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#hero">Trang chủ</a>
+                <a class="nav-link" href="#hero">Trang chủ</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about-us">Giới thiệu</a>
@@ -82,8 +85,9 @@
                 <a class="nav-link" href="#thu-vien">Thư viện</a>
               </li>
             </ul>
+
             <button class="btn">
-              <a class="nav-link" href="#lien-he">Liên hệ</a>
+              <a class="nav-link" href="../asset/pages/lien-he.html">Liên hệ</a>
             </button>
           </div>
         </div>
@@ -100,7 +104,7 @@
     </header>
 
     <main>
-      <section class="about-us" id="about-us">
+      <section id="about-us">
         <div class="container">
           <h1>SỨ MỆNH VÀ GIÁ TRỊ CỦA T1</h1>
           <p>
@@ -117,40 +121,61 @@
         </div>
       </section>
 
-      <section class="achieve" id="achieve">
+      <section id="achieve">
         <div class="container">
           <h1>THÀNH TÍCH</h1>
-          <div class="row">
-            <div class="col-8 achieve-content">
+          <div class="row align-items-center mb-5">
+            <div
+              class="col-12 col-md-8 achieve-content"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="100"
+            >
               <h2>Thành tích quốc tế (ấn tượng nhất)</h2>
               <ul>
                 <li>
                   5 lần vô địch Chung kết Thế giới (World Championship): 2013,
-                  2015, 2016, 2023 và 2024 — dẫn đầu lịch sử LMHT thế giớiI.
+                  2015, 2016, 2023 và 2024 — dẫn đầu lịch sử LMHT thế giới.
                 </li>
                 <li>
-                  2 lần vô địch Mid-Season Invitational (MSI): năm 2016 và 2017.
+                  2 lần vô địch Mid-Season Invitational (MSI): năm 2016 và 2017.
                 </li>
-                <li>1 lần vô địch Esports World Cup (LMHT): năm 2024.</li>
+                <li>1 lần vô địch Esports World Cup (LMHT): năm 2024.</li>
               </ul>
             </div>
-            <div class="col-4 achieve-image">
+            <div
+              class="col-12 col-md-4 achieve-image text-md-end"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
               <img
-                class="achieve-img"
+                class="achieve-img img-fluid"
                 src="asset/img/achieve-1.png"
-                alt="T1 lụm cúp EWC"
+                alt="T1 quốc tế"
               />
             </div>
           </div>
-          <div class="row">
-            <div class="col-4 achieve-image">
+
+          <div class="row align-items-center mb-5">
+            <div
+              class="col-12 col-md-4 achieve-image order-2 order-md-1"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="200"
+            >
               <img
-                class="achieve-img"
+                class="achieve-img img-fluid"
                 src="asset/img/achieve-2.png"
-                alt="T1 lụm cúp EWC"
+                alt="T1 LCK"
               />
             </div>
-            <div class="col-8 achieve-content">
+            <div
+              class="col-12 col-md-8 achieve-content order-1 order-md-2"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="100"
+            >
               <h2>Thành tích trong nước — giải LCK</h2>
               <ul>
                 <li>
@@ -168,33 +193,257 @@
               </ul>
             </div>
           </div>
-          <div class="row">
-            <div class="col-8 achieve-content">
+
+          <div class="row align-items-center mb-5">
+            <div
+              class="col-12 col-md-8 achieve-content"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="100"
+            >
               <h2>Các cột mốc lịch sử đáng chú ý</h2>
               <ul>
                 <li>
-                  Đội đầu tiên bảo vệ thành công chức vô địch CKTG, với 2 lần
-                  liên tiếp lên ngôi (2015–2016).
+                  Đội đầu tiên bảo vệ thành công chức vô địch CKTG (2015–2016).
                 </li>
                 <li>
-                  Thành tích vô tiền khoáng hậu: vô địch cả IEM, MSI và Worlds —
-                  Triple Crown (không cùng mùa).
+                  Vô địch cả IEM, MSI và Worlds — Triple Crown (không cùng mùa).
                 </li>
                 <li>
-                  Đội đầu tiên vô địch CKTG liên tiếp cùng một đội hình, với
-                  Zeus, Oner, Faker, Gumayusi và Keria trong đội hình chính.
+                  Vô địch CKTG liên tiếp cùng một đội hình: Zeus, Oner, Faker,
+                  Gumayusi, Keria.
                 </li>
               </ul>
             </div>
-            <div class="col-4 achieve-image">
+            <div
+              class="col-12 col-md-4 achieve-image text-md-end"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="200"
+            >
               <img
-                class="achieve-img"
+                class="achieve-img img-fluid"
                 src="asset/img/achieve-3.png"
-                alt="T1 lụm cúp EWC"
+                alt="T1 lịch sử"
               />
             </div>
           </div>
+          <button class="btn">
+            <a class="detail" href="/asset/pages/thanh-tich.html  ">Chi tiết</a>
+          </button>
         </div>
+      </section>
+      <section id="roster">
+        <h1>TUYỂN THỦ</h1>
+        <div class="container my-5">
+          <div class="row d-flex justify-content-center text-center">
+            <div
+              class="col-6 col-md-4 col-lg d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
+              <a class="player" href="#">
+                <img
+                  src="asset/img/top.png"
+                  alt="người đi đường trên"
+                  class="player-role"
+                />
+                <img
+                  src="asset/img/t1_doran_2025.png"
+                  class="img-fluid player-face"
+                  alt=""
+                />
+                <div class="player-name">
+                  <h5>DORAN</h5>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-6 col-md-4 col-lg d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <a class="player" href="#">
+                <img
+                  src="asset/img/jug.png"
+                  alt="người đi rừng"
+                  class="player-role"
+                />
+                <img
+                  src="asset/img/t1_oner_2025.png"
+                  class="img-fluid player-face"
+                  alt=""
+                />
+                <div class="player-name">
+                  <h5>ONER</h5>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-6 col-md-4 col-lg d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+            >
+              <a class="player" href="#">
+                <img
+                  src="asset/img/mid.png"
+                  alt="người đi đường giữa"
+                  class="player-role"
+                />
+                <img
+                  src="asset/img/t1_faker_2025.png"
+                  class="img-fluid player-face"
+                  alt=""
+                />
+                <div class="player-name">
+                  <h5>FAKER</h5>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-6 col-md-4 col-lg d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <a class="player" href="#">
+                <img
+                  src="asset/img/ad.png"
+                  alt="người đi xạ thủ"
+                  class="player-role"
+                />
+                <img
+                  src="asset/img/t1_gumayusi_2025.png"
+                  class="img-fluid player-face"
+                  alt=""
+                />
+                <div class="player-name">
+                  <h5>GUMAYUSI</h5>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="col-6 col-md-4 col-lg d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
+              <a class="player" href="#">
+                <img
+                  src="asset/img/sup.png"
+                  alt="người đi hỗ trợ"
+                  class="player-role"
+                />
+                <img
+                  src="asset/img/t1_keria_2025.png"
+                  class="img-fluid player-face"
+                  alt="Keria"
+                />
+                <div class="player-name">
+                  <h5>KERIA</h5>
+                </div>
+              </a>
+            </div>
+          </div>
+          <h2>BAN HUẤN LUYỆN</h2>
+          <div class="row d-flex justify-content-center text-center">
+            <div
+              class="col-6 col-md-4 col-lg d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+            >
+              <a class="player" href="#">
+                <img
+                  src="asset/img/t1_kkoma_2025.png"
+                  class="img-fluid player-face"
+                  alt="Huấn luyện viên trưởng"
+                />
+                <div class="player-name">
+                  <h5>KK0ma</h5>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-6 col-md-4 col-lg d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <a class="player" href="#">
+                <img
+                  src="asset/img/t1_rather_2025.png"
+                  class="img-fluid player-face"
+                  alt="Đồng huấn luyện viên trưởng"
+                />
+                <div class="player-name">
+                  <h5>RATHER</h5>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-6 col-md-4 col-lg d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
+              <a class="player" href="#">
+                <img
+                  src="asset/img/t1_tom_2025.png"
+                  class="img-fluid player-face"
+                  alt="Huấn luyện viên"
+                />
+                <div class="player-name">
+                  <h5>TOM</h5>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-6 col-md-4 col-lg d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
+              <a class="player" href="#">
+                <img
+                  src="asset/img/t1_mata_2025.png"
+                  class="img-fluid player-face"
+                  alt="Huấn luyện viên"
+                />
+                <div class="player-name">
+                  <h5>MATA</h5>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-6 col-md-4 col-lg d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
+              <a class="player" href="#">
+                <img
+                  src="asset/img/t1_rooti_2025.png"
+                  class="img-fluid player-face"
+                  alt="Huấn luyện viên trưởng"
+                />
+                <div class="player-name">
+                  <h5>ROOTI</h5>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <button class="btn">
+          <a class="detail" href="/asset/pages/tuyen-thu.html ">Chi tiết</a>
+        </button>
       </section>
     </main>
 
@@ -216,6 +465,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="asset/js/script.js"></script>
   </body>
 </html>
