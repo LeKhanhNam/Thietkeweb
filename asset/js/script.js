@@ -125,3 +125,44 @@ $(document).ready(function () {
     document.querySelectorAll(".error-message").forEach((el) => el.remove());
   }
 });
+
+$(document).ready(function () {
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+
+  const feedbackForm = document.getElementById("feedbackForm");
+  if (feedbackForm) {
+    feedbackForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (feedbackForm.checkValidity()) {
+        alert("Gửi form thành công! Chúng tôi sẽ liên hệ lại bạn sớm nhất.");
+        feedbackForm.reset();
+        feedbackForm.classList.remove("was-validated");
+      } else {
+        feedbackForm.classList.add("was-validated");
+      }
+    });
+  }
+
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const galleryItems = document.querySelectorAll(".gallery .item");
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.getAttribute("data-filter");
+
+      filterButtons.forEach((button) => button.classList.remove("active"));
+      btn.classList.add("active");
+
+      galleryItems.forEach((item) => {
+        if (filter === "all" || item.classList.contains(filter)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+});
