@@ -22,6 +22,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
     <link
       rel="apple-touch-icon"
@@ -43,37 +47,35 @@
     <link rel="manifest" href="asset/img/favicon_io/site.webmanifest" />
 
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Giới thiệu đội tuyển T1</title>
+    <title>Giới thiệu</title>
   </head>
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-          <a class="navbar-brand" href="index.html"
-            ><img src="../img/T1-logo.png" alt="Logo đội tuyển T1" class="logo"
-          /></a>
+          <a class="navbar-brand" href="/index.html">
+            <img src="../img/T1-logo.png" alt="T1 logo" class="logo" />
+          </a>
+
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
-            aria-label="Mở menu điều hướng"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link" href="/index.html">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="../pages/gioi-thieu.html"
+                <a class="nav-link" href="../pages/gioi-thieu.html"
                   >Giới thiệu</a
                 >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/tuyen-thu.html">Tuyển thủ</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../pages/thanh-tich.html"
@@ -81,12 +83,14 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../pages/thu-vien.html">Thư viện</a>
+                <a class="nav-link" href="../pages/tuyen-thu.html">Tuyển thủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../pages/lien-he.html">Liên hệ</a>
+                <a class="nav-link" href="../pages/thu-vien.html">Thư viện</a>
               </li>
             </ul>
+
+            <a class="btn btn-danger" href="../pages/lien-he.html">Liên hệ</a>
           </div>
         </div>
       </nav>
@@ -98,7 +102,7 @@
         class="container my-5 text-center"
         data-aos="fade-up"
       >
-        <h1 class="mb-4">T1 - Biểu tượng của Esports</h1>
+        <h1 class="mb-4 text-t1-red">T1 - Biểu tượng của Esports</h1>
         <p class="lead">
           T1 là một tổ chức thể thao điện tử hàng đầu thế giới, với di sản lâu
           đời và tầm ảnh hưởng sâu rộng trong cộng đồng Liên Minh Huyền Thoại.
@@ -125,7 +129,7 @@
       </section>
 
       <section id="lich-su" class="container my-5" data-aos="fade-right">
-        <h2 class="fw-bold mb-3 text-center">Lịch sử vàng son</h2>
+        <h2 class="fw-bold mb-3 text-center text-t1-red">Lịch sử vàng son</h2>
         <div class="row align-items-center">
           <div class="col-md-6 order-md-2">
             <img
@@ -164,7 +168,9 @@
       </section>
 
       <section id="thu-vien-ngan" class="container my-5" data-aos="fade-up">
-        <h2 class="fw-bold mb-4 text-center">Những khoảnh khắc đáng nhớ</h2>
+        <h2 class="fw-bold mb-4 text-center text-t1-red">
+          Những khoảnh khắc đáng nhớ
+        </h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <div class="card h-100 border-0 bg-transparent">
@@ -213,7 +219,7 @@
       </section>
 
       <section id="faq" class="container my-5" data-aos="fade-up">
-        <h2 class="fw-bold mb-4 text-center">Câu hỏi thường gặp</h2>
+        <h2 class="fw-bold mb-4 text-center text-t1-red">Câu hỏi thường gặp</h2>
         <div class="accordion" id="faqAccordion">
           <div class="accordion-item">
             <h3 class="accordion-header">
@@ -285,17 +291,29 @@
       </div>
     </main>
 
-    <footer class="bg-dark text-white">
+    <footer class="bg-dark text-white mt-5">
       <div class="container text-center py-3">
         <p class="fw-bold mb-2">
           &copy; 2025 SK Telecom CS T1 Co. ALL RIGHTS RESERVED
         </p>
         <p>
-          Theo dõi chúng tôi trên:
-          <a href="https://www.facebook.com/T1LoL/" target="_blank">Facebook</a>
-          | <a href="https://x.com/t1lol" target="_blank">Twitter</a> |
-          <a href="https://www.instagram.com/t1lol/" target="_blank"
-            >Instagram</a
+          Follow us on:
+          <a
+            href="https://www.facebook.com/T1LoL/"
+            target="_blank"
+            class="social-link"
+            ><i class="fab fa-facebook-f"></i> Facebook</a
+          >
+          |
+          <a href="https://x.com/t1lol" target="_blank" class="social-link"
+            ><i class="fab fa-twitter"></i> Twitter</a
+          >
+          |
+          <a
+            href="https://www.instagram.com/t1lol/"
+            target="_blank"
+            class="social-link"
+            ><i class="fab fa-instagram"></i> Instagram</a
           >
         </p>
       </div>
