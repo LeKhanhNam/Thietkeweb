@@ -136,7 +136,7 @@ h6 {
 
 #achieve {
   text-align: center;
-  background: #1a1a1a; /* ở đây nền chính là đen */
+  background: #1a1a1a;
   position: relative;
   padding: 100px 24px 100px;
   overflow: visible;
@@ -150,11 +150,10 @@ h6 {
   right: 0;
   bottom: -1px;
   height: 120px;
-  background: #e6e6e6; /* MÀU NGƯỢC LẠI: trắng của section kế tiếp */
+  background: #e6e6e6;
   z-index: -1;
   pointer-events: none;
 
-  /* Đường cong NGƯỢC LÊN (đảo màu so với #about-us) */
   clip-path: polygon(
     0% 35%,
     12.5% 45%,
@@ -368,6 +367,10 @@ footer a:hover {
   color: #e0e0e0;
 }
 
-.fw-bold.mb-3.text-center {
-  color: #b30000;
+.text-t1-red {
+  color: #e30613;
+}
+
+.accordion-button:hover {
+  color: #e30613;
 }
