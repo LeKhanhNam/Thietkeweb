@@ -4,31 +4,25 @@ $(document).ready(function () {
     once: true,
   });
 
-  let counted = false;
-  $(window).scroll(function () {
-    if ($("#thong-ke").length) {
-      const oTop = $("#thong-ke").offset().top - window.innerHeight;
-      if (!counted && $(window).scrollTop() > oTop) {
-        $(".countup").each(function () {
-          const $this = $(this),
-            countTo = $this.attr("data-count");
-          $({ countNum: $this.text() }).animate(
-            { countNum: countTo },
-            {
-              duration: 2000,
-              easing: "swing",
-              step: function () {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function () {
-                $this.text(this.countNum);
-              },
-            }
-          );
-        });
-        counted = true;
-      }
-    }
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const galleryItems = document.querySelectorAll(".gallery .item");
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.getAttribute("data-filter");
+
+      filterButtons.forEach((button) => button.classList.remove("active"));
+      btn.classList.add("active");
+
+      galleryItems.forEach((item) => {
+        if (filter === "all" || item.classList.contains(filter)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+      AOS.refresh();
+    });
   });
 
   const contactForm = document.getElementById("contactForm");
@@ -52,13 +46,26 @@ $(document).ready(function () {
         );
         successMsg.setAttribute("role", "alert");
         successMsg.innerHTML = `
-    <strong>Thành công!</strong> Gửi form thành công. Chúng tôi sẽ liên hệ lại bạn sớm nhất.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Đóng"></button>
-  `;
+          <strong>Thành công!</strong> Gửi form thành công. Chúng tôi sẽ liên hệ lại bạn sớm nhất.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Đóng"></button>
+        `;
 
         contactForm.appendChild(successMsg);
-
         contactForm.reset();
+      }
+    });
+  }
+
+  const feedbackForm = document.getElementById("feedbackForm");
+  if (feedbackForm) {
+    feedbackForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (feedbackForm.checkValidity()) {
+        alert("Gửi form thành công! Chúng tôi sẽ liên hệ lại bạn sớm nhất.");
+        feedbackForm.reset();
+        feedbackForm.classList.remove("was-validated");
+      } else {
+        feedbackForm.classList.add("was-validated");
       }
     });
   }
@@ -166,49 +173,3 @@ $(document).ready(function () {
     });
   });
 });
-
-(function ($) {
-  if (!$ || !$.fn) {
-    console.error("jQuery chưa được nạp trước roster.js");
-    return;
-  }
-
-  $(function () {
-    const $sections = $(".profile-section");
-    const $buttons = $(".player-btn");
-    const navbarH = 72;
-
-    function showSection(target, pushHash = true) {
-      if (!target || !$(target).length) return;
-
-      $sections.removeClass("active");
-      $(target).addClass("active");
-
-      $buttons.removeClass("active");
-      $buttons.filter('[data-target="' + target + '"]').addClass("active");
-
-      if (pushHash) history.pushState({ id: target }, "", target);
-
-      const y = $(target).offset().top - navbarH;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-
-    $buttons.on("click", function () {
-      const target = $(this).data("target");
-      showSection(target, true);
-    });
-
-    const initial =
-      window.location.hash && $(window.location.hash).length
-        ? window.location.hash
-        : $(".player-btn.active").data("target") ||
-          $(".player-btn").first().data("target");
-
-    showSection(initial, false);
-
-    window.addEventListener("popstate", function (e) {
-      const id = (e.state && e.state.id) || window.location.hash || initial;
-      showSection(id, false);
-    });
-  });
-})(jQuery);
