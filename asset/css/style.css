@@ -264,6 +264,79 @@ h6 {
   color: #770505;
 }
 
+/* page tuyen thu */
+
+.player-strip {
+  top: 56px;
+  z-index: 5;
+  background: #161616;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #262626;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.player-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 0.9rem;
+  margin: 0.4rem;
+  border-radius: 999px;
+  border: 1px solid #2a2a2a;
+  background: #1b1b1b;
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.player-btn.active {
+  background: #d10022;
+  color: #fff;
+  border-color: #d10022;
+}
+.profile-section {
+  display: none;
+  scroll-margin-top: 110px;
+}
+.profile-section.active {
+  display: block;
+}
+.profile-card {
+  background-color: #e1e1e1;
+  color: #161616;
+  border: 1px solid #2a2a2a;
+  padding-bottom: 48px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.profile-content {
+  font-size: 24px;
+  font-weight: 500;
+}
+.profile-content h1 {
+  color: #770505;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.badge-role {
+  background: #2a2a2a;
+  color: #eee;
+}
+@media (max-width: 767.98px) {
+  .player-strip {
+    top: 56px;
+  }
+}
+
 p.lead {
   font-weight: 400;
   font-size: 1.15rem;

@@ -166,3 +166,49 @@ $(document).ready(function () {
     });
   });
 });
+
+(function ($) {
+  if (!$ || !$.fn) {
+    console.error("jQuery chưa được nạp trước roster.js");
+    return;
+  }
+
+  $(function () {
+    const $sections = $(".profile-section");
+    const $buttons = $(".player-btn");
+    const navbarH = 72;
+
+    function showSection(target, pushHash = true) {
+      if (!target || !$(target).length) return;
+
+      $sections.removeClass("active");
+      $(target).addClass("active");
+
+      $buttons.removeClass("active");
+      $buttons.filter('[data-target="' + target + '"]').addClass("active");
+
+      if (pushHash) history.pushState({ id: target }, "", target);
+
+      const y = $(target).offset().top - navbarH;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+
+    $buttons.on("click", function () {
+      const target = $(this).data("target");
+      showSection(target, true);
+    });
+
+    const initial =
+      window.location.hash && $(window.location.hash).length
+        ? window.location.hash
+        : $(".player-btn.active").data("target") ||
+          $(".player-btn").first().data("target");
+
+    showSection(initial, false);
+
+    window.addEventListener("popstate", function (e) {
+      const id = (e.state && e.state.id) || window.location.hash || initial;
+      showSection(id, false);
+    });
+  });
+})(jQuery);
