@@ -1,6 +1,11 @@
+:root {
+  --blackbg: #1a1a1a;
+  --whitebg: #e6e6e6;
+}
+
 body {
   font-family: "Poppins", "Roboto", Arial, sans-serif;
-  background-color: #1a1a1a;
+  background-color: var(--blackbg);
   color: #e0e0e0;
 }
 
@@ -90,7 +95,7 @@ h6 {
 #about-us {
   text-align: center;
   padding-top: 0;
-  background: #e6e6e6;
+  background: var(--whitebg);
   position: relative;
   padding: 100px 24px 120px;
   overflow: visible;
@@ -104,7 +109,7 @@ h6 {
   right: 0;
   bottom: -1px;
   height: 160px;
-  background: #1a1a1a;
+  background: var(--blackbg);
   z-index: -1;
   pointer-events: none;
 
@@ -136,7 +141,7 @@ h6 {
 
 #achieve {
   text-align: center;
-  background: #1a1a1a;
+  background: var(--blackbg);
   position: relative;
   padding: 100px 24px 100px;
   overflow: visible;
@@ -150,7 +155,7 @@ h6 {
   right: 0;
   bottom: -1px;
   height: 120px;
-  background: #e6e6e6;
+  background: var(--whitebg);
   z-index: -1;
   pointer-events: none;
 
@@ -213,7 +218,7 @@ h6 {
 
 #roster {
   padding-top: 0;
-  background-color: #e6e6e6;
+  background-color: var(--whitebg);
   text-align: center;
 }
 
@@ -273,8 +278,9 @@ h6 {
   margin: 0;
   color: #770505;
 }
-/* Trạng thái cơ bản */
+
 .profile-section {
+  padding: 20px 0 80px 0;
   display: none;
   opacity: 0;
   will-change: transform, opacity;
@@ -282,9 +288,8 @@ h6 {
 .profile-section.active {
   display: block;
   opacity: 1;
-} /* ✅ giữ lại khi xong animation */
+}
 
-/* Hiệu ứng */
 @keyframes inLeft {
   from {
     transform: translateX(-40px);
@@ -313,7 +318,6 @@ h6 {
   animation: outRight 360ms ease-in both;
 }
 
-/* Tôn trọng người dùng hạn chế chuyển động */
 @media (prefers-reduced-motion: reduce) {
   .slide-in-left,
   .slide-out-right {
@@ -397,6 +401,82 @@ h6 {
 @media (max-width: 990px) {
   .profile-content {
     font-size: 16px;
+  }
+}
+
+/* page thành tích */
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #334455;
+  transform: translateX(-50%);
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.tl-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fa012f;
+  box-shadow: 0 0 0 6px rgba(255, 56, 92, 0.25);
+  z-index: 2;
+}
+
+.tl-item.tl-start .tl-dot {
+  top: 80%;
+  transform: translate(-50%, 50%);
+}
+
+.tl-card {
+  background: #0d0303;
+  background: linear-gradient(
+    144deg,
+    rgba(13, 3, 3, 1) 0%,
+    rgba(54, 14, 14, 1) 67%,
+    rgba(107, 31, 31, 1) 100%
+  );
+  border: 1px solid #221517;
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.tl-year {
+  color: #dac847;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.tl-img {
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+}
+.lite {
+  color: #94a3b8;
+}
+@media (max-width: 992px) {
+  .timeline::before {
+    display: none;
+  }
+  .tl-dot {
+    display: none;
   }
 }
 
