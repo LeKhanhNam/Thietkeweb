@@ -173,3 +173,72 @@ $(document).ready(function () {
     });
   });
 });
+
+(function ($) {
+  $(function () {
+    const $sections = $(".profile-section");
+    const $buttons = $(".player-btn");
+    const navbarH = 72;
+    let isAnimating = false;
+
+    function onAnimEnd($el, cb) {
+      $el.one("animationend webkitAnimationEnd oAnimationEnd", cb);
+    }
+
+    function showSection(target, pushHash = true) {
+      const $next = $(target);
+      if (!$next.length || isAnimating) return;
+
+      const $curr = $sections.filter(".active");
+      if ($curr[0] === $next[0]) {
+        const y = $next.offset().top - navbarH;
+        window.scrollTo({ top: y, behavior: "smooth" });
+        return;
+      }
+
+      isAnimating = true;
+
+      $buttons.removeClass("active");
+      $buttons.filter('[data-target="' + target + '"]').addClass("active");
+
+      if (pushHash) history.pushState({ id: target }, "", target);
+
+      const finishIn = () => {
+        $next.addClass("active slide-in-left");
+        onAnimEnd($next, () => {
+          $next.removeClass("slide-in-left");
+          const y = $next.offset().top - navbarH;
+          window.scrollTo({ top: y, behavior: "smooth" });
+          isAnimating = false;
+        });
+      };
+
+      if ($curr.length) {
+        $curr.addClass("slide-out-right");
+        onAnimEnd($curr, () => {
+          $curr.removeClass("active slide-out-right");
+          finishIn();
+        });
+      } else {
+        finishIn();
+      }
+    }
+
+    $buttons.on("click", function () {
+      const target = $(this).data("target");
+      showSection(target, true);
+    });
+
+    const initial =
+      window.location.hash && $(window.location.hash).length
+        ? window.location.hash
+        : $(".player-btn.active").data("target") ||
+          $(".player-btn").first().data("target");
+    showSection(initial, false);
+
+    window.addEventListener("popstate", (e) => {
+      const id = (e.state && e.state.id) || window.location.hash || initial;
+      showSection(id, false);
+    });
+  });
+})(jQuery);

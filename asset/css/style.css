@@ -131,7 +131,7 @@ h6 {
 #about-us p {
   margin: 30px 0 38px;
   color: #000;
-  font-size: 1.6rem;
+  font-size: 24px;
 }
 
 #achieve {
@@ -173,7 +173,8 @@ h6 {
   margin: 60px auto;
 }
 
-#achieve h1 {
+#achieve h1,
+#library h1 {
   color: #c3000d;
   text-align: center;
 }
@@ -199,6 +200,15 @@ h6 {
 .achieve-img {
   width: 300px;
   border-radius: 20px;
+}
+
+@media (max-width: 550px) {
+  .achieve-content li {
+    font-size: 16px;
+  }
+  #about-us p {
+    font-size: 16px;
+  }
 }
 
 #roster {
@@ -262,6 +272,53 @@ h6 {
   align-items: center;
   margin: 0;
   color: #770505;
+}
+/* Trạng thái cơ bản */
+.profile-section {
+  display: none;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.profile-section.active {
+  display: block;
+  opacity: 1;
+} /* ✅ giữ lại khi xong animation */
+
+/* Hiệu ứng */
+@keyframes inLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes outRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+}
+
+.slide-in-left {
+  animation: inLeft 420ms ease-out both;
+}
+.slide-out-right {
+  animation: outRight 360ms ease-in both;
+}
+
+/* Tôn trọng người dùng hạn chế chuyển động */
+@media (prefers-reduced-motion: reduce) {
+  .slide-in-left,
+  .slide-out-right {
+    animation: none !important;
+  }
 }
 
 /* page tuyen thu */
@@ -334,6 +391,12 @@ h6 {
 @media (max-width: 767.98px) {
   .player-strip {
     top: 56px;
+  }
+}
+
+@media (max-width: 990px) {
+  .profile-content {
+    font-size: 16px;
   }
 }
 
