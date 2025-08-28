@@ -421,6 +421,10 @@ h6 {
   background: #334455;
   transform: translateX(-50%);
 }
+
+.tl-title {
+  color: #b30000;
+}
 .tl-item {
   position: relative;
   margin-bottom: 3rem;
