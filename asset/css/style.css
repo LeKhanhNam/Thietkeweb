@@ -325,6 +325,13 @@ h6 {
   }
 }
 
+/* page gioi thieu */
+
+#gioi-thieu,
+#lich-su {
+  padding-bottom: 0;
+}
+
 /* page tuyen thu */
 
 .player-strip {
@@ -425,10 +432,12 @@ h6 {
 .tl-title {
   color: #b30000;
 }
+
 .tl-item {
   position: relative;
   margin-bottom: 3rem;
 }
+
 .tl-dot {
   position: absolute;
   left: 50%;
